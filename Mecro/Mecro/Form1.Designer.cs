@@ -34,6 +34,8 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.start = new Guna.UI2.WinForms.Guna2Button();
             this.stop = new Guna.UI2.WinForms.Guna2Button();
+            this.count = new Guna.UI2.WinForms.Guna2TextBox();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.SuspendLayout();
             // 
             // gunaLabel1
@@ -48,6 +50,7 @@
             // 
             // content
             // 
+            this.content.Animated = true;
             this.content.BorderRadius = 10;
             this.content.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.content.DefaultText = "";
@@ -61,16 +64,18 @@
             this.content.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.content.HoverState.Parent = this.content;
             this.content.Location = new System.Drawing.Point(15, 27);
+            this.content.Multiline = true;
             this.content.Name = "content";
             this.content.PasswordChar = '\0';
             this.content.PlaceholderText = "";
             this.content.SelectedText = "";
             this.content.ShadowDecoration.Parent = this.content;
-            this.content.Size = new System.Drawing.Size(233, 33);
+            this.content.Size = new System.Drawing.Size(233, 120);
             this.content.TabIndex = 1;
             // 
             // time
             // 
+            this.time.Animated = true;
             this.time.BorderRadius = 10;
             this.time.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.time.DefaultText = "";
@@ -104,6 +109,7 @@
             // 
             // start
             // 
+            this.start.Animated = true;
             this.start.BorderRadius = 10;
             this.start.CheckedState.Parent = this.start;
             this.start.CustomImages.Parent = this.start;
@@ -111,7 +117,7 @@
             this.start.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.start.ForeColor = System.Drawing.Color.White;
             this.start.HoverState.Parent = this.start;
-            this.start.Location = new System.Drawing.Point(15, 66);
+            this.start.Location = new System.Drawing.Point(15, 164);
             this.start.Name = "start";
             this.start.ShadowDecoration.Parent = this.start;
             this.start.Size = new System.Drawing.Size(131, 45);
@@ -121,6 +127,7 @@
             // 
             // stop
             // 
+            this.stop.Animated = true;
             this.stop.BorderRadius = 10;
             this.stop.CheckedState.Parent = this.stop;
             this.stop.CustomImages.Parent = this.stop;
@@ -128,7 +135,7 @@
             this.stop.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.stop.ForeColor = System.Drawing.Color.White;
             this.stop.HoverState.Parent = this.stop;
-            this.stop.Location = new System.Drawing.Point(162, 66);
+            this.stop.Location = new System.Drawing.Point(162, 164);
             this.stop.Name = "stop";
             this.stop.ShadowDecoration.Parent = this.stop;
             this.stop.Size = new System.Drawing.Size(131, 45);
@@ -136,11 +143,47 @@
             this.stop.Text = "정지";
             this.stop.Click += new System.EventHandler(this.stop_Click);
             // 
+            // count
+            // 
+            this.count.Animated = true;
+            this.count.BorderRadius = 10;
+            this.count.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.count.DefaultText = "";
+            this.count.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.count.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.count.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.count.DisabledState.Parent = this.count;
+            this.count.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.count.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.count.FocusedState.Parent = this.count;
+            this.count.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.count.HoverState.Parent = this.count;
+            this.count.Location = new System.Drawing.Point(263, 111);
+            this.count.Name = "count";
+            this.count.PasswordChar = '\0';
+            this.count.PlaceholderText = "";
+            this.count.SelectedText = "";
+            this.count.ShadowDecoration.Parent = this.count;
+            this.count.Size = new System.Drawing.Size(109, 33);
+            this.count.TabIndex = 7;
+            // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel3.Location = new System.Drawing.Point(260, 93);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(58, 15);
+            this.gunaLabel3.TabIndex = 6;
+            this.gunaLabel3.Text = "반복 횟수";
+            // 
             // Mecro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 156);
+            this.ClientSize = new System.Drawing.Size(506, 236);
+            this.Controls.Add(this.count);
+            this.Controls.Add(this.gunaLabel3);
             this.Controls.Add(this.stop);
             this.Controls.Add(this.start);
             this.Controls.Add(this.time);
@@ -163,6 +206,8 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI2.WinForms.Guna2Button start;
         private Guna.UI2.WinForms.Guna2Button stop;
+        private Guna.UI2.WinForms.Guna2TextBox count;
+        private Guna.UI.WinForms.GunaLabel gunaLabel3;
     }
 }
 
